@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+
+# resolve DEB_VERSION_UPSTREAM
+include /usr/share/dpkg/pkg-info.mk
+
+DEB_VERSION_UPSTREAM_ORIG = $(firstword $(subst ~,$() ,$(DEB_VERSION_UPSTREAM)))
+
+CRATE = $(patsubst rust-%,%,$(DEB_SOURCE))
+TARGET = debian/librust-$(CRATE)-dev/usr/share/cargo/registry/$(CRATE)-$(DEB_VERSION_UPSTREAM_ORIG)
+
+# generate cargo-checksum file
+_mkchecksum = printf '{"package":"%s","files":{}}\n' \
+ $$(sha256sum $(or $2,$(dir $1)Cargo.toml) | grep -Po '^\S+') > $1;
+
+execute_before_dh_auto_configure:
+	$(call _mkchecksum,debian/cargo-checksum.json,Cargo.toml)
+
+execute_after_dh_auto_install:
+	rm -rf $(addprefix $(TARGET)/,.github benchmark_tools compare smhasher)
+	rm -f $(addprefix $(TARGET)/,.gitignore LICENSE-*)
+
+%:
+	dh $@ --buildsystem cargo

@@ -1,0 +1,76 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: aHash
+Upstream-Contact: https://github.com/tkaitchuck/ahash/issues
+Source: https://github.com/tkaitchuck/ahash
+
+Files: *
+Copyright:
+  Tom Kaitchuck <Tom.Kaitchuck@gmail.com>
+License-Grant:
+ Licensed under either of:
+   * Apache License, Version 2.0,
+     (<LICENSE-APACHE> or <http://www.apache.org/licenses/LICENSE-2.0>)
+   * MIT license
+     (<LICENSE-MIT> or <http://opensource.org/licenses/MIT>)
+ at your option.
+License: Apache-2.0 or Expat
+Reference:
+ Cargo.toml
+ README.md
+Comment:
+ Copyright and licensing is only vaguely declared.
+ Copyright holder is assumed
+ from package.authors field in file <CARGO.toml>.
+ Licensing granted in file README.md is assumed to apply generally.
+ .
+ Copyright holder listed in file <LICENSE-MIT> is omitted:
+ Name Amanieu d'Antras appears nowhere else in code or git commits,
+ and coverage range is several years before initial git commit.
+
+Files: debian/*
+Copyright:
+  2022  Jonas Smedegaard <dr@jones.dk>
+  2022  Purism, SPC
+License-Grant:
+ This packaging is free software:
+ you can redistribute it and/or modify it
+ under the terms of the GNU General Public License
+ as published by the Free Software Foundation,
+ either version 3,
+ or (at your option) any later version.
+License: GPL-3+
+Reference: debian/copyright
+
+License: Apache-2.0
+Reference: /usr/share/common-licenses/Apache-2.0
+
+License: Expat
+ Permission is hereby granted, free of charge,
+ to any person obtaining a copy
+ of this software and associated documentation files
+ (the "Software"),
+ to deal in the Software without restriction,
+ including without limitation
+ the rights to use, copy, modify, merge, publish, distribute,
+ sublicense, and/or sell copies of the Software,
+ and to permit persons
+ to whom the Software is furnished to do so,
+ subject to the following conditions:
+ .
+ The above copyright notice and this permission notice
+ shall be included in all copies or substantial portions
+ of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS",
+ WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+ AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+ FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+License: GPL-3+
+Reference: /usr/share/common-licenses/GPL-3

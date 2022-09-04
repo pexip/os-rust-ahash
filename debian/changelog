@@ -1,0 +1,44 @@
+rust-ahash (0.7.6-5) unstable; urgency=medium
+
+  * add patch cherry-picked upstream
+    to fix aes acceleration (mostly) on aarch64;
+    closes: bug#1019099, thanks to Peter Michael Green
+  * stop overzealously provide versioned virtual packages
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 04 Sep 2022 08:53:03 +0200
+
+rust-ahash (0.7.6-4) unstable; urgency=medium
+
+  * fix package dependencies:
+    + add patch 2001 to relax dependency on crate const-random;
+      relax build-dependency on librust-const-random-dev;
+      thanks to Peter Green (see bug#987324):
+    + add patch 2002 to relax dependency on crate rand;
+      have autopkgtests depend on librust-rand-0.8+default-dev
+      (not librust-rand-0.7+default-dev)
+  * declare compliance with Debian Policy 4.6.1
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sat, 28 May 2022 19:32:32 +0200
+
+rust-ahash (0.7.6-3) unstable; urgency=medium
+
+  * fix grammar in long description
+  * fix drop bogus metapackage librust-ahash+serde-dev
+  * fix provide metapackage librust-ahash+compile-time-rng-dev
+    (not librust-ahash+const-random-dev),
+    and stop mention bogus feature const-random in description fields
+
+ -- Jonas Smedegaard <dr@jones.dk>  Mon, 16 May 2022 14:09:54 +0200
+
+rust-ahash (0.7.6-2) unstable; urgency=medium
+
+  * omit installing unnneded files
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 27 Apr 2022 10:53:22 +0200
+
+rust-ahash (0.7.6-1) unstable; urgency=medium
+
+  * initial packaging release;
+    closes: bug#1010256
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 27 Apr 2022 10:40:00 +0200

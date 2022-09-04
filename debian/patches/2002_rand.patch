@@ -1,0 +1,16 @@
+Description: relax dependency on crate rand
+Author: Jonas Smedegaard <dr@jones.dk>
+Last-Update: 2022-05-28
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -83,7 +83,7 @@
+ fnv = "1.0.5"
+ fxhash = "0.2.1"
+ hex = "0.4.2"
+-rand = "0.7.3"
++rand = ">= 0.7.3, < 9"
+ serde_json = "1.0.59"
+ 
+ [package.metadata.docs.rs]
