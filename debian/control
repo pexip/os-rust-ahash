@@ -10,12 +10,14 @@ Build-Depends:
  librust-version-check-0.9+default-dev <!nocheck>,
  libstd-rust-dev <!nocheck>,
  rustc:native <!nocheck>,
-Maintainer: Jonas Smedegaard <dr@jones.dk>
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Jonas Smedegaard <dr@jones.dk>
 Standards-Version: 4.6.1
 Vcs-Git: https://salsa.debian.org/debian/rust-ahash.git
 Vcs-Browser: https://salsa.debian.org/debian/rust-ahash
 Homepage: https://github.com/tkaitchuck/ahash
 Rules-Requires-Root: no
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ bookworm
 
 Package: librust-ahash-dev
 Architecture: any
