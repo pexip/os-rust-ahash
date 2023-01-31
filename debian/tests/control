@@ -1,74 +1,79 @@
-Test-Command: /usr/share/cargo/bin/cargo-auto-test ahash 0.7.6 --all-targets --all-features
+Test-Command: /usr/share/cargo/bin/cargo-auto-test ahash 0.7.6
+ --all-targets --all-features
 Features: test-name=rust-ahash:@
 Depends:
  dh-cargo (>= 18),
- librust-criterion-0.3+default-dev (>= 0.3.2),
- librust-fnv-1+default-dev (>= 1.0.5),
- librust-fxhash-0.2+default-dev (>= 0.2.1),
+ librust-criterion-0.3+default-dev,
+ librust-fnv-1+default-dev,
+ librust-fxhash-0.2+default-dev,
  librust-hex-0.4+default-dev (>= 0.4.2),
- librust-no-panic-0.1+default-dev (>= 0.1.10),
+ librust-no-panic-0.1+default-dev,
  librust-rand-0.8+default-dev,
  librust-seahash-4+default-dev,
  librust-serde-json-1+default-dev (>= 1.0.59),
  @,
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test ahash 0.7.6 --all-targets
+Test-Command: /usr/share/cargo/bin/cargo-auto-test ahash 0.7.6
+ --all-targets
 Features: test-name=librust-ahash-dev:default
 Depends:
  dh-cargo (>= 18),
- librust-criterion-0.3+default-dev (>= 0.3.2),
- librust-fnv-1+default-dev (>= 1.0.5),
- librust-fxhash-0.2+default-dev (>= 0.2.1),
+ librust-ahash+default-dev,
+ librust-criterion-0.3+default-dev,
+ librust-fnv-1+default-dev,
+ librust-fxhash-0.2+default-dev,
  librust-hex-0.4+default-dev (>= 0.4.2),
- librust-no-panic-0.1+default-dev (>= 0.1.10),
+ librust-no-panic-0.1+default-dev,
  librust-rand-0.8+default-dev,
  librust-seahash-4+default-dev,
  librust-serde-json-1+default-dev (>= 1.0.59),
- @,
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test ahash 0.7.6 --all-targets --no-default-features --features std
+Test-Command: /usr/share/cargo/bin/cargo-auto-test ahash 0.7.6
+ --all-targets --no-default-features --features std
 Features: test-name=librust-ahash-dev:std
 Depends:
  dh-cargo (>= 18),
- librust-criterion-0.3+default-dev (>= 0.3.2),
- librust-fnv-1+default-dev (>= 1.0.5),
- librust-fxhash-0.2+default-dev (>= 0.2.1),
+ librust-ahash+std-dev,
+ librust-criterion-0.3+default-dev,
+ librust-fnv-1+default-dev,
+ librust-fxhash-0.2+default-dev,
  librust-hex-0.4+default-dev (>= 0.4.2),
- librust-no-panic-0.1+default-dev (>= 0.1.10),
+ librust-no-panic-0.1+default-dev,
  librust-rand-0.8+default-dev,
  librust-seahash-4+default-dev,
  librust-serde-json-1+default-dev (>= 1.0.59),
- @,
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test ahash 0.7.6 --all-targets --no-default-features
+Test-Command: /usr/share/cargo/bin/cargo-auto-test ahash 0.7.6
+ --all-targets --no-default-features
 Features: test-name=librust-ahash-dev:
 Depends:
  dh-cargo (>= 18),
- librust-criterion-0.3+default-dev (>= 0.3.2),
- librust-fnv-1+default-dev (>= 1.0.5),
- librust-fxhash-0.2+default-dev (>= 0.2.1),
+ librust-ahash-dev,
+ librust-criterion-0.3+default-dev,
+ librust-fnv-1+default-dev,
+ librust-fxhash-0.2+default-dev,
  librust-hex-0.4+default-dev (>= 0.4.2),
- librust-no-panic-0.1+default-dev (>= 0.1.10),
+ librust-no-panic-0.1+default-dev,
  librust-rand-0.8+default-dev,
  librust-seahash-4+default-dev,
  librust-serde-json-1+default-dev (>= 1.0.59),
- @,
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test ahash 0.7.6 --all-targets --no-default-features --features compile-time-rng
-Features: test-name=librust-ahash+compile-time-rng-dev:compile-time-rng
+Test-Command: /usr/share/cargo/bin/cargo-auto-test ahash 0.7.6
+ --all-targets --no-default-features --features compile-time-rng
+Features: test-name=librust-ahash-dev:compile-time-rng
 Depends:
  dh-cargo (>= 18),
- librust-criterion-0.3+default-dev (>= 0.3.2),
- librust-fnv-1+default-dev (>= 1.0.5),
- librust-fxhash-0.2+default-dev (>= 0.2.1),
+ librust-ahash+compile-time-rng-dev,
+ librust-criterion-0.3+default-dev,
+ librust-fnv-1+default-dev,
+ librust-fxhash-0.2+default-dev,
  librust-hex-0.4+default-dev (>= 0.4.2),
- librust-no-panic-0.1+default-dev (>= 0.1.10),
+ librust-no-panic-0.1+default-dev,
  librust-rand-0.8+default-dev,
  librust-seahash-4+default-dev,
  librust-serde-json-1+default-dev (>= 1.0.59),
- @,
 Restrictions: allow-stderr, skip-not-installable

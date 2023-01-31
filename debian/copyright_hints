@@ -17,13 +17,11 @@ Files: Cargo.toml
  compare/readme.md
  compare/resources/sheet.css
  compare/tests/compare.rs
- debian/clean
  debian/control
  debian/copyright-check
+ debian/dh-cargo/README.md
  debian/gbp.conf
- debian/librust-ahash+compile-time-rng-dev.lintian-overrides
  debian/patches/020220518~4c340f5.patch
- debian/patches/2001_const-random.patch
  debian/patches/2002_rand.patch
  debian/patches/README
  debian/patches/series
@@ -61,8 +59,22 @@ Copyright: NONE
 License: Apache-2.0
  FIXME
 
+Files: debian/dh-cargo/bin/cargo
+Copyright: 2015-2016, Luca Bruno <lucab@debian.org>
+  2016-2019, Ximin Luo <infinity0@debian.org>
+  2017-2019, Vasudeva Kamath <vasudev@copyninja.info>
+License: Apache-2.0
+ FIXME
+
 Files: LICENSE-MIT
 Copyright: 2016, Amanieu d'Antras
+License: Expat
+ FIXME
+
+Files: debian/dh-cargo/lib/Debian/Debhelper/Buildsystem/cargo.pm
+Copyright: 2016, Josh Triplett <josh@joshtriplett.org>
+  2018, Ximin Luo <infinity0@debian.org>
+  2022-2023, Jonas Smedegaard <dr@jones.dk>
 License: Expat
  FIXME
 
