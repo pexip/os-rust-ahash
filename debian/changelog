@@ -1,3 +1,9 @@
+rust-ahash (0.7.6-7pexip1) pexip; urgency=medium
+
+  * New upstream version
+
+ -- Huw Jones <huw@pexip.com>  Thu, 16 Mar 2023 17:47:35 +0000
+
 rust-ahash (0.7.6-7) unstable; urgency=medium
 
   * merge virtual feature package into main binary package
