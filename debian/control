@@ -2,17 +2,23 @@ Source: rust-ahash
 Section: rust
 Priority: optional
 Build-Depends:
- cargo:native <!nocheck>,
  debhelper-compat (= 13),
  dh-cargo (>= 25),
+ librust-criterion-0.3+default-dev <!nocheck>,
+ librust-fnv-1+default-dev <!nocheck>,
+ librust-fxhash-0.2+default-dev <!nocheck>,
  librust-getrandom-0.2+default-dev (>= 0.2.3) <!nocheck>,
+ librust-hex-0.4+default-dev (>= 0.4.2) <!nocheck>,
+ librust-no-panic-0.1+default-dev <!nocheck>,
  librust-once-cell-1+alloc-dev (>= 1.8) <!nocheck>,
+ librust-rand-0.8+default-dev <!nocheck>,
+ librust-seahash-4+default-dev <!nocheck>,
+ librust-serde-json-1+default-dev (>= 1.0.59) <!nocheck>,
  librust-version-check-0.9+default-dev <!nocheck>,
- libstd-rust-dev <!nocheck>,
- rustc:native <!nocheck>,
+ libstring-shellquote-perl,
 Maintainer: Pexip AS <packaging@pexip.com>
 XSBC-Pexip-Original-Maintainer: Jonas Smedegaard <dr@jones.dk>
-Standards-Version: 4.6.1
+Standards-Version: 4.6.2
 Vcs-Git: https://salsa.debian.org/debian/rust-ahash.git
 Vcs-Browser: https://salsa.debian.org/debian/rust-ahash
 Homepage: https://github.com/tkaitchuck/ahash
@@ -20,21 +26,17 @@ Rules-Requires-Root: no
 XS-Pexip-Upstream: http://ftp.debian.org/debian/ bookworm
 
 Package: librust-ahash-dev
-Architecture: any
-Multi-Arch: same
+Architecture: all
+Multi-Arch: foreign
 Depends:
+ librust-const-random-0.1+default-dev (>= 0.1.8),
  librust-getrandom-0.2+default-dev (>= 0.2.3),
  librust-once-cell-1+alloc-dev (>= 1.8),
  librust-version-check-0.9+default-dev,
  ${misc:Depends},
-Suggests:
- librust-ahash+compile-time-rng-dev (= ${binary:Version}),
 Provides:
- librust-ahash+default-dev (= ${binary:Version}),
- librust-ahash+std-dev (= ${binary:Version}),
- librust-ahash-0+default-dev (= ${binary:Version}),
- librust-ahash-0+std-dev (= ${binary:Version}),
  librust-ahash-0-dev (= ${binary:Version}),
+ librust-ahash-0.7+compile-time-rng-dev (= ${binary:Version}),
  librust-ahash-0.7+default-dev (= ${binary:Version}),
  librust-ahash-0.7+std-dev (= ${binary:Version}),
  librust-ahash-0.7-dev (= ${binary:Version}),
@@ -48,24 +50,3 @@ Description: non-cryptographic hash function - Rust source code
  .
  This package contains the source for the Rust ahash crate,
  packaged for use with cargo and dh-cargo.
-
-Package: librust-ahash+compile-time-rng-dev
-Architecture: any
-Multi-Arch: same
-Depends:
- librust-ahash-dev (= ${binary:Version}),
- librust-const-random-0.1+default-dev (>= 0.1.8),
- ${misc:Depends},
-Provides:
- librust-ahash-0+compile-time-rng-dev (= ${binary:Version}),
- librust-ahash-0.7+compile-time-rng-dev (= ${binary:Version}),
-Description: non-cryptographic hash function - feature compile-time-rng
- AHash is the fastest, DOS resistant hash currently available in Rust.
- AHash is intended *exclusively* for use in in-memory hashmaps.
- .
- AHash's output is of high quality
- but aHash is **not** a cryptographically secure hash.
- .
- This metapackage enables feature "compile-time-rng"
- for the Rust ahash crate,
- by pulling in any additional dependencies needed by that feature.

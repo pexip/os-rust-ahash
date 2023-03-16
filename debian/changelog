@@ -1,3 +1,30 @@
+rust-ahash (0.7.6-7) unstable; urgency=medium
+
+  * merge virtual feature package into main binary package
+  * change binary library package to be arch-independent
+  * declare compliance with Debian Policy 4.6.2
+  * stop superfluously provide virtual unversioned feature packages
+  * fix: provide virtual major-versioned feature package
+  * stop build-depend on cargo libstd-rust-dev rustc,
+    not used explicitly
+  * update dh-cargo fork;
+    build-depend on libstring-shellquote-perl
+  * update copyright info: update coverage
+
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 31 Jan 2023 11:16:28 +0100
+
+rust-ahash (0.7.6-6) unstable; urgency=medium
+
+  * drop patch 2001, obsoleted by Debian package updates
+  * tighten autopkgtest dependencies
+  * simplify build, using embedded fork of dh-cargo
+  * build-depend on Rust crates
+    criterion fnv fxhash hex no-panic rand seahash serde
+  * relax superfluous autopkgtest package versioning
+  * fix typo in autopkgtest dependency
+
+ -- Jonas Smedegaard <dr@jones.dk>  Mon, 31 Oct 2022 17:03:08 +0100
+
 rust-ahash (0.7.6-5pexip1) pexip; urgency=medium
 
   * Prepare Pexip packaging
