@@ -1,3 +1,9 @@
+rust-ahash (0.7.6-7pexip3) pexip-bookworm; urgency=medium
+
+  * Bookworm build for product distribution
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Sat, 09 Dec 2023 22:58:05 +0000
+
 rust-ahash (0.7.6-7pexip2) pexip-bookworm; urgency=medium
 
   * Initial bookworm build
